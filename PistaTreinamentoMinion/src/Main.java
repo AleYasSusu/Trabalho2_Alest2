@@ -1,10 +1,27 @@
-import java.util.Scanner;
-
 public class Main {
 	public static void main(String [] args) {
 		
+		Graph<String> gr = new Graph<String>(null, null);
+		gr.adicionarVertice("joao");
+		gr.adicionarVertice("maria");
+		gr.adicionarVertice("pedro");
+		gr.adicionarVertice("creber");
+		gr.adicionarVertice("arthur");
+		gr.adicionarVertice("heitor");
+		gr.adicionarVertice("gabriel");
+		gr.adicionarVertice("isadora");
 		
-		Leitura leia = new Leitura();
+		gr.adicionarAresta(3, "joao", "maria");
+		gr.adicionarAresta(2, "joao", "pedro");
+		gr.adicionarAresta(5, "joao", "arthur");
+		gr.adicionarAresta(4, "maria", "arthur");
+		gr.adicionarAresta(1, "isadora", "creber");
+		gr.adicionarAresta(3, "gabriel", "maria");
+		gr.adicionarAresta(2, "heitor", "joao");
+		
+	gr.buscaEmLargura();
+		
+		/**Leitura leia = new Leitura();
 		int opcao = 0;
         String arq = ("src/casos_cohen/oito_enunciado.txt");
         String arq2 = ("src/casos_cohen/dez.txt");
@@ -30,7 +47,7 @@ public class Main {
             default:
                 System.out.println("Opção invalida");
 
-        }
+        }**/
 	}
 
 }
