@@ -15,10 +15,10 @@ public Graph(ArrayList<TIPO> vertices, ArrayList<TIPO> arestas) {
 	this.arestas =  new ArrayList<Aresta<TIPO>>();;
 }
 
-public void adicionarAresta(int peso, TIPO dadoInicio, TIPO dadoFim) {
+public void adicionarAresta(TIPO dadoInicio, TIPO dadoFim) {
 	Vertex<TIPO> inicio = this.getVertex(dadoInicio);
 	Vertex<TIPO> fim = this.getVertex(dadoFim);
-	Aresta<TIPO> aresta = new Aresta<TIPO>(peso, inicio, fim);
+	Aresta<TIPO> aresta = new Aresta<TIPO>( inicio, fim);
 	inicio.adicioarArestaSaida(aresta);
 	fim.adicioarArestaEntrada(aresta);
 }
